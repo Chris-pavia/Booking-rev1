@@ -41,8 +41,7 @@ public class ArtisteDAO {
 
         try {
             // --- FROM NomDeClasse
-            Query q = this.session.createQuery("FROM Artiste");
-            q.setMaxResults(9);
+            Query q = this.session.createQuery("FROM Artiste ORDER BY RAND()").setMaxResults(nb);
             res = (List<Artiste>) q.list();
         } catch (HibernateException he) {
             he.printStackTrace();

@@ -18,7 +18,7 @@
             
             <%
                 ArtisteDAO artitesDAO = new ArtisteDAO();
-                List<Artiste> listeArtites = artitesDAO.getArtistes();
+                List<Artiste> listeArtites = artitesDAO.getArtistes(9);
 
                 if (listeArtites != null) {
                     Iterator<Artiste> itr = listeArtites.iterator();
