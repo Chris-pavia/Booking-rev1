@@ -1,21 +1,24 @@
-<%@page import="booking.hibernate.entity.Artiste"%>
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
+
+
+
+<%@page import="booking.hibernate.dao.Artiste"%>
+<%@page import="booking.hibernate.dao.ArtisteDAO"%>
 <!DOCTYPE html>
 <%@page import="java.util.Iterator"%>
 <%@page import="java.util.List"%>
-<%@page import="booking.hibernate.entity.ArtisteDAO"%>
 
 
 <html>
     <head>
         <meta charset="UTF-8">
         <title>Artiste</title>
+        <link href="../css/bootstrap.css" rel="stylesheet">
     </head>
-<link href="../css/bootstrap.css" rel="stylesheet">
+
     <body>
         <article id="centre">
 
-            
+
             <%
                 ArtisteDAO artitesDAO = new ArtisteDAO();
                 List<Artiste> listeArtites = artitesDAO.getArtistes(9);
@@ -25,20 +28,19 @@
                     while (itr.hasNext()) {
                         Artiste element = itr.next();
             %>
-            <div id="artiste"<%=element.getIdArt() %> class="hero-unit span3">
-            <h3><%=element.getLibPrenom()%> <%=element.getLibNom()%></h3>
-            <img class="img-rounded" src="../images/artiste/<%=element.getLibPhoto().trim()%>" />
-            
-            <p>catégorie : <%=element.getIdCatgArt()%></p>
-            
-            <p>budget : <%=element.getNumTarifJour()%> €</p>
-            
+            <div id="artiste"<%=element.getIdArt()%> class="hero-unit span3">
+                <h3><%=element.getLibPrenom()%> <%=element.getLibNom()%></h3>
+                <img class="img-rounded" src="../images/artiste/<%=element.getLibPhoto().trim()%>" />
+
+                <p>cat�gorie : <%=element.getCategorieArt()%></p>
+
+                <p>budget : <%=element.getNumTarifJour()%> ?</p>
+
             </div>
-            <%
+                
+                <%
                     }
-                } /// if
-%>
-            <br/><br/>
+                        %>
 
             <!-- Execute l'action de navigation -->
 

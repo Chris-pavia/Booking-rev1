@@ -1,5 +1,5 @@
-package booking.hibernate.entity;
-// Generated 22 mai 2013 14:13:06 by Hibernate Tools 3.2.1.GA
+package booking.hibernate.dao;
+// Generated 22 mai 2013 16:38:27 by Hibernate Tools 3.2.1.GA
 
 
 

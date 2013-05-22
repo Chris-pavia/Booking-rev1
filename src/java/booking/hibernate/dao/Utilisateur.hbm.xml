@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
-<!-- Generated 22 mai 2013 14:13:06 by Hibernate Tools 3.2.1.GA -->
+<!-- Generated 22 mai 2013 16:38:28 by Hibernate Tools 3.2.1.GA -->
 <hibernate-mapping>
-  <class catalog="resa" name="booking.hibernate.entity.Utilisateur" table="utilisateur">
+  <class catalog="resa" name="booking.hibernate.dao.Utilisateur" table="utilisateur">
     <id name="login" type="string">
       <column length="50" name="login"/>
       <generator class="assigned"/>
