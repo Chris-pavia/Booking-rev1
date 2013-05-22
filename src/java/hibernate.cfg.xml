@@ -2,10 +2,15 @@
 <!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
 <hibernate-configuration>
   <session-factory>
-    <property name="hibernate.dialect">org.hibernate.dialect.DerbyDialect</property>
-    <property name="hibernate.connection.driver_class">org.apache.derby.jdbc.ClientDriver</property>
-    <property name="hibernate.connection.url">jdbc:derby://localhost:1527/sample</property>
-    <property name="hibernate.connection.username">app</property>
-    <property name="hibernate.connection.password">app</property>
+    <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+    <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+    <property name="hibernate.connection.url">jdbc:mysql://192.168.1.146:3306/resa</property>
+    <property name="hibernate.connection.username">next</property>
+    <property name="hibernate.connection.password">mdp</property>
+    <mapping resource="booking/hibernate/entity/Artiste.hbm.xml"/>
+    <mapping resource="booking/hibernate/entity/Reservation.hbm.xml"/>
+    <mapping resource="booking/hibernate/entity/Mobilite.hbm.xml"/>
+    <mapping resource="booking/hibernate/entity/Utilisateur.hbm.xml"/>
+    <mapping resource="booking/hibernate/entity/CategorieArt.hbm.xml"/>
   </session-factory>
 </hibernate-configuration>
