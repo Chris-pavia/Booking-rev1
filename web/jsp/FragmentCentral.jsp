@@ -63,6 +63,7 @@
                 et à mesure ses valeur pour le positionnement CSS ainsi que pour le contenu
                 de chaques acteurs
             --%>
+            <%@include file="_header.jsp" %>
 
             <%!
 
@@ -85,6 +86,8 @@
             %>
     </div>
 </div>
+    
+     <%@include file="_footer.jsp" %>
 
 <!-- Le javascript
     ================================================== -->
