@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
-<!-- Generated 22 mai 2013 14:13:06 by Hibernate Tools 3.2.1.GA -->
+<!-- Generated 22 mai 2013 16:38:28 by Hibernate Tools 3.2.1.GA -->
 <hibernate-mapping>
-  <class catalog="resa" name="booking.hibernate.entity.Reservation" table="reservation">
-    <composite-id class="booking.hibernate.entity.ReservationId" name="id">
+  <class catalog="resa" name="booking.hibernate.dao.Reservation" table="reservation">
+    <composite-id class="booking.hibernate.dao.ReservationId" name="id">
       <key-property name="idArt" type="int">
         <column name="id_art"/>
       </key-property>

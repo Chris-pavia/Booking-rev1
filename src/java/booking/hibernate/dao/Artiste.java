@@ -1,5 +1,5 @@
-package booking.hibernate.entity;
-// Generated 22 mai 2013 14:13:06 by Hibernate Tools 3.2.1.GA
+package booking.hibernate.dao;
+// Generated 22 mai 2013 16:38:27 by Hibernate Tools 3.2.1.GA
 
 
 import java.math.BigDecimal;
@@ -11,10 +11,10 @@ public class Artiste  implements java.io.Serializable {
 
 
      private Integer idArt;
+     private CategorieArt categorieArt;
      private String libNom;
      private String libPrenom;
      private BigDecimal numTarifJour;
-     private Integer idCatgArt;
      private String libDescr;
      private String libEmail;
      private String numMobile;
@@ -24,11 +24,11 @@ public class Artiste  implements java.io.Serializable {
     public Artiste() {
     }
 
-    public Artiste(String libNom, String libPrenom, BigDecimal numTarifJour, Integer idCatgArt, String libDescr, String libEmail, String numMobile, Integer idMobilite, String libPhoto) {
+    public Artiste(CategorieArt categorieArt, String libNom, String libPrenom, BigDecimal numTarifJour, String libDescr, String libEmail, String numMobile, Integer idMobilite, String libPhoto) {
+       this.categorieArt = categorieArt;
        this.libNom = libNom;
        this.libPrenom = libPrenom;
        this.numTarifJour = numTarifJour;
-       this.idCatgArt = idCatgArt;
        this.libDescr = libDescr;
        this.libEmail = libEmail;
        this.numMobile = numMobile;
@@ -42,6 +42,13 @@ public class Artiste  implements java.io.Serializable {
     
     public void setIdArt(Integer idArt) {
         this.idArt = idArt;
+    }
+    public CategorieArt getCategorieArt() {
+        return this.categorieArt;
+    }
+    
+    public void setCategorieArt(CategorieArt categorieArt) {
+        this.categorieArt = categorieArt;
     }
     public String getLibNom() {
         return this.libNom;
@@ -63,13 +70,6 @@ public class Artiste  implements java.io.Serializable {
     
     public void setNumTarifJour(BigDecimal numTarifJour) {
         this.numTarifJour = numTarifJour;
-    }
-    public Integer getIdCatgArt() {
-        return this.idCatgArt;
-    }
-    
-    public void setIdCatgArt(Integer idCatgArt) {
-        this.idCatgArt = idCatgArt;
     }
     public String getLibDescr() {
         return this.libDescr;

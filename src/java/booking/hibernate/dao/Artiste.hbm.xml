@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
-<!-- Generated 22 mai 2013 14:13:06 by Hibernate Tools 3.2.1.GA -->
+<!-- Generated 22 mai 2013 16:38:28 by Hibernate Tools 3.2.1.GA -->
 <hibernate-mapping>
-  <class catalog="resa" name="booking.hibernate.entity.Artiste" table="artiste">
+  <class catalog="resa" name="booking.hibernate.dao.Artiste" table="artiste">
     <id name="idArt" type="java.lang.Integer">
       <column name="id_art"/>
       <generator class="identity"/>
     </id>
+    <many-to-one class="booking.hibernate.dao.CategorieArt" fetch="select" name="categorieArt">
+      <column name="id_catg_art"/>
+    </many-to-one>
     <property name="libNom" type="string">
       <column length="30" name="lib_nom"/>
     </property>
@@ -15,9 +18,6 @@
     </property>
     <property name="numTarifJour" type="big_decimal">
       <column name="num_tarif_jour" precision="5"/>
-    </property>
-    <property name="idCatgArt" type="java.lang.Integer">
-      <column name="id_catg_art"/>
     </property>
     <property name="libDescr" type="string">
       <column length="500" name="lib_descr"/>

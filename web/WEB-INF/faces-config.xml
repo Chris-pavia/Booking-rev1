@@ -9,14 +9,14 @@
     
     <managed-bean>
         <managed-bean-name>artiste</managed-bean-name>
-        <managed-bean-class>booking.hibernate.entity.Artiste</managed-bean-class>
-        <managed-bean-scope>session</managed-bean-scope>
-    </managed-bean>
+        <managed-bean-class>booking.hibernate.dao.Artiste</managed-bean-class>
+    
+        <managed-bean-scope>session</managed-bean-scope></managed-bean>
     <managed-bean>
     <managed-bean-name>artisteDAO</managed-bean-name>
-    <managed-bean-class>booking.hibernate.entity.ArtisteDAO</managed-bean-class>
-    <managed-bean-scope>session</managed-bean-scope>
-</managed-bean>
+    <managed-bean-class>booking.hibernate.dao.ArtisteDAO</managed-bean-class>
+
+    <managed-bean-scope>session</managed-bean-scope></managed-bean>
 
 
 </faces-config>
