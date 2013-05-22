@@ -26,7 +26,7 @@
             %>
             <div id="artiste"<%=element.getIdArt() %> class="hero-unit span3">
             <h3><%=element.getLibPrenom()%> <%=element.getLibNom()%></h3>
-            <img class="img-rounded" src="../images/artiste/<%=element.getLibPhoto().trim()%>" />
+            <img class="img-rounded image-petite" src="../images/artiste/<%=element.getLibPhoto().trim()%>" />
             
             <p>catégorie : <%=element.getIdCatgArt()%></p>
             
