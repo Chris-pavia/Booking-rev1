@@ -12,8 +12,6 @@
     <link href="../css/bootstrap-responsive.css" rel="stylesheet">
 </head>
 <header>
-    <div class="container navbar-fixed-top">
     <img src="../img/booking_logo.jpg" class="img-rounded span2"/>
     <h1 class="span9">Booking</h1>
-    </div>
 </header>

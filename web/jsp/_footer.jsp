@@ -16,13 +16,13 @@
     <div class="container">
     <label>Booking ©</label>
     <ul class="footer-links">
-        <li class="muted">Grand Patron : Silvio Berlusconi</li>
-        <li class="muted">Chef projet : Philippe Guerville</li>
-        <li class="muted">Client relou: Marc Vetro</li>
-        <li class="muted">Larbin n°1 : Didier Noisette</li>
-        <li class="muted">Larbin n°2 : Gregory Hrycaj</li>
-        <li class="muted">Larbin n°3 : Christophe Pavia</li>
-        <li class="muted">Larbin n°4 : Valentin Jouanne AKA Florian</li>
+        <li class="muted participant">Grand Patron : Silvio Berlusconi</li>
+        <li class="muted participant">Chef projet : Philippe Guerville</li>
+        <li class="muted participant">Client relou: Marc Vetro</li>
+        <li class="muted participant">Larbin n°1 : Didier Noisette</li>
+        <li class="muted participant">Larbin n°2 : Gregory Hrycaj</li>
+        <li class="muted participant">Larbin n°3 : Christophe Pavia</li>
+        <li class="muted participant">Larbin n°4 : Valentin Jouanne AKA Florian</li>
     </ul>
     
     <label >Nous Contacter</label>
