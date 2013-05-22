@@ -4,12 +4,13 @@
     Author     : stagiaire
 --%>
 
-<%@page import="booking.hibernate.entity.Artiste"%>
+<%@page import="booking.hibernate.dao.Artiste"%>
+<%@page import="booking.hibernate.dao.CategorieArt"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <%@page import="java.util.Iterator"%>
 <%@page import="java.util.List"%>
-<%@page import="booking.hibernate.entity.ArtisteDAO"%>
+<%@page import="booking.hibernate.dao.ArtisteDAO"%>
 
 <div class="container-fluid">
 <article id="centre" class="row">
@@ -28,7 +29,7 @@
             <h3><%=element.getLibPrenom()%> <%=element.getLibNom()%></h3>
             <img class="img-rounded image-petite" src="../images/artiste/<%=element.getLibPhoto().trim()%>" />
             
-            <p>catégorie : <%=element.getIdCatgArt()%></p>
+            <p>catégorie : <%=element.getCategorieArt().getLibCatg()%></p>
             
             <p>budget : <%=element.getNumTarifJour()%> €</p>
             
