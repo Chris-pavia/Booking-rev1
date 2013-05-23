@@ -11,34 +11,45 @@
 <%@page import="java.util.List"%>
 <%@page import="booking.hibernate.dao.ReservationDAO"%>
 
-<div class="container-fluid">
-<article id="centre" class="row">
-
-            
-            <%
-                ReservationDAO ReservationDAO = new ReservationDAO();
-                List<Reservation> listeReservation = ReservationDAO.getReservation(1);
-
-                if (listeReservation != null) {
-                    Iterator<Reservation> itr = listeReservation.iterator();
-                    while (itr.hasNext()) {
-                        Reservation element = itr.next();
-            %>
-            <div id="Reservation"<%=element.getId() %>>
-            <h3><%=element.getLibTheme()%> <%=element.getLibLieu()%></h3>
-            
-            
-            </div>
-            
-            <%
-                    }
-                } /// if
-%>
-            <br/><br/>
-
-            <!-- Execute l'action de navigation -->
+<div>
+    <article id="centre" >
 
 
+        <%
+            ReservationDAO ReservationDAO = new ReservationDAO();
+            List<Reservation> listeReservation = ReservationDAO.getReservation(6);
 
-        </article> <!-- FIN CENTRE -->
+            if (listeReservation != null) {
+                Iterator<Reservation> itr = listeReservation.iterator();
+                while (itr.hasNext()) {
+                    Reservation element = itr.next();
+        %>
+        <div id="Reservation"<%=element.getId()%>>
+            <h3><%=element.getLibNomClient()%> <%=element.getLibPrenomClient()%></h3>
+            <h4>souhaite vous avoir pour :</h4>    
+            <h4><%=element.getLibTheme()%></h4>
+            <h4>à <%=element.getLibLieu()%></h4>
+            <h4>tel :<%=element.getNumMobileClient()%></h4> 
+            <h4>Email : <%=element.getLibEmailClient()%></h4>
+            <form action="ReservationValider.jsp">
+                <input type="hidden" value="<%=element.getId()%>">
+                <input type="submit" value="Accepter">
+            </form>
+            <form action="ReservationAnnuler.jsp">
+                <input type="hidden" value="<%=element.getId()%>">
+                <input type="submit" value="Refuser">
+            </form>
         </div>
+
+        <%
+                }
+            } /// if
+%>
+        <br/><br/>
+
+        <!-- Execute l'action de navigation -->
+
+
+
+    </article> <!-- FIN CENTRE -->
+</div>

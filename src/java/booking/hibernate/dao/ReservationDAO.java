@@ -25,7 +25,8 @@ public class ReservationDAO {
 
         try {
             // --- FROM NomDeClasse
-            Query q = this.session.createQuery("FROM Reservation WHERE id_art=1");
+            String requet = "FROM Reservation WHERE id_art="+nb;
+           Query q = this.session.createQuery(requet);
             
             res = (List<Reservation>) q.list();
         } catch (HibernateException he) {
