@@ -1,5 +1,5 @@
 package booking.hibernate.entities;
-// Generated 23 mai 2013 12:27:33 by Hibernate Tools 3.2.1.GA
+// Generated 23 mai 2013 12:34:30 by Hibernate Tools 3.2.1.GA
 
 
 import java.math.BigDecimal;

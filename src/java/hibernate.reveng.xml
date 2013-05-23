@@ -4,7 +4,7 @@
   <schema-selection match-catalog="resa"/>
   <table-filter match-name="mobilite"/>
   <table-filter match-name="statut_resa"/>
-  <table-filter match-name="reservation"/>
   <table-filter match-name="artiste"/>
   <table-filter match-name="categorie_art"/>
+  <table-filter match-name="reservation"/>
 </hibernate-reverse-engineering>
