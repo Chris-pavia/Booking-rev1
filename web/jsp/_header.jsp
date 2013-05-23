@@ -15,7 +15,7 @@
    <div class="navbar-inner">
      <div class="container">
         <img src="../img/booking_logo2.jpg" />
-        <h1>Booking</h1>
+        <h1 class="brand">Booking</h1>
      </div>
    </div>
  </div>

@@ -13,18 +13,19 @@
 <%@page import="booking.hibernate.dao.ArtisteDAO"%>
 
 <div class="container-fluid">
-<article id="centre" class="row">
+    
+  <article id="centre" class="row">
 
             
-            <%
-                ArtisteDAO artitesDAO = new ArtisteDAO();
-                List<Artiste> listeArtites = artitesDAO.getArtistes(9);
+<%
+    ArtisteDAO artitesDAO = new ArtisteDAO();
+    List<Artiste> listeArtites = artitesDAO.getArtistes(9);
 
-                if (listeArtites != null) {
-                    Iterator<Artiste> itr = listeArtites.iterator();
-                    while (itr.hasNext()) {
-                        Artiste element = itr.next();
-            %>
+    if (listeArtites != null) {
+        Iterator<Artiste> itr = listeArtites.iterator();
+        while (itr.hasNext()) {
+            Artiste element = itr.next();
+%>
             <div id="artiste"<%=element.getIdArt() %> class="hero-unit span3">
             <h3><%=element.getLibPrenom()%> <%=element.getLibNom()%></h3>
             <img class="img-rounded image-petite" src="../images/artiste/<%=element.getLibPhoto().trim()%>" />
@@ -35,15 +36,14 @@
             
             </div>
             
-            <%
-                    }
-                } /// if
+<%
+        }
+     } /// if
 %>
-            <br/><br/>
+    <br/><br/>
 
-            <!-- Execute l'action de navigation -->
+    <!-- Execute l'action de navigation -->
 
+  </article> <!-- FIN CENTRE -->
 
-
-        </article> <!-- FIN CENTRE -->
-        </div>
+</div>
