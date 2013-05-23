@@ -26,6 +26,12 @@
         while (itr.hasNext()) {
             Artiste element = itr.next();
 %>
+                if (listeArtites != null) {
+                    Iterator<Artiste> itr = listeArtites.iterator();
+                    while (itr.hasNext()) {
+                        Artiste element = itr.next(); 
+            %>
+
             <div id="artiste"<%=element.getIdArt() %> class="hero-unit span3">
             <h3><%=element.getLibPrenom()%> <%=element.getLibNom()%></h3>
             <img class="img-rounded image-petite" src="../images/artiste/<%=element.getLibPhoto().trim()%>" />
@@ -33,7 +39,12 @@
             <p>catégorie : <%=element.getCategorieArt().getLibCatg()%></p>
             
             <p>budget : <%=element.getNumTarifJour()%> €</p>
-            
+            <form action="FragmentReservation.jsp" method="post">
+                <input type="hidden" value="<%=element.getLibNom()%>" name="nomArtiste">
+                <input type="hidden" value="<%=element.getLibPrenom()%>" name="prenomArtiste">
+                <input type="hidden" value="<%=element.getIdArt() %>" name="idArtiste">
+                <input type="submit" value="Reserver" />
+            </form>
             </div>
             
 <%

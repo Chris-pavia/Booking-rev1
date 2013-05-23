@@ -23,7 +23,10 @@ public class Reservation  implements java.io.Serializable {
     public Reservation() {
     }
 
-	
+    public Reservation(String id) {
+        this.id = ReservationId.class.cast(id);
+
+    }	
     public Reservation(ReservationId id, Artiste artiste, String libTheme) {
         this.id = id;
         this.artiste = artiste;

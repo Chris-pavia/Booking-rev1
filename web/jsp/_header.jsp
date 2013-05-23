@@ -14,8 +14,7 @@
  <div class="navbar navbar-fixed-top">
    <div class="navbar-inner">
      <div class="container">
-        <img src="../img/booking_logo2.jpg" />
-        <h1 class="brand">Booking</h1>
+        <h1 class="brand"><img src="../img/booking_logo2.jpg" />Booking</h1>
      </div>
    </div>
  </div>
