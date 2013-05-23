@@ -4,8 +4,8 @@
     Author     : stagiaire
 --%>
 
-<%@page import="booking.hibernate.dao.Artiste"%>
-<%@page import="booking.hibernate.dao.CategorieArt"%>
+<%@page import="booking.hibernate.entities.Artiste"%>
+<%@page import="booking.hibernate.entities.CategorieArt"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <%@page import="java.util.Iterator"%>

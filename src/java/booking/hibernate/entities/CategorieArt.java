@@ -1,5 +1,5 @@
-package booking.hibernate.dao;
-// Generated 22 mai 2013 16:38:27 by Hibernate Tools 3.2.1.GA
+package booking.hibernate.entities;
+// Generated 23 mai 2013 10:41:49 by Hibernate Tools 3.2.1.GA
 
 
 import java.util.HashSet;
@@ -13,7 +13,7 @@ public class CategorieArt  implements java.io.Serializable {
 
      private int idCatg;
      private String libCatg;
-     private Set artistes = new HashSet(0);
+     private Set<Artiste> artistes = new HashSet<Artiste>(0);
 
     public CategorieArt() {
     }
@@ -22,7 +22,7 @@ public class CategorieArt  implements java.io.Serializable {
     public CategorieArt(int idCatg) {
         this.idCatg = idCatg;
     }
-    public CategorieArt(int idCatg, String libCatg, Set artistes) {
+    public CategorieArt(int idCatg, String libCatg, Set<Artiste> artistes) {
        this.idCatg = idCatg;
        this.libCatg = libCatg;
        this.artistes = artistes;
@@ -42,11 +42,11 @@ public class CategorieArt  implements java.io.Serializable {
     public void setLibCatg(String libCatg) {
         this.libCatg = libCatg;
     }
-    public Set getArtistes() {
+    public Set<Artiste> getArtistes() {
         return this.artistes;
     }
     
-    public void setArtistes(Set artistes) {
+    public void setArtistes(Set<Artiste> artistes) {
         this.artistes = artistes;
     }
 

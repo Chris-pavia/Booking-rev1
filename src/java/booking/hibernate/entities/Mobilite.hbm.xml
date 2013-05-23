@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 23 mai 2013 10:41:50 by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="booking.hibernate.entities.Mobilite" table="mobilite" catalog="resa">
+        <id name="idMobilite" type="int">
+            <column name="id_mobilite" />
+            <generator class="assigned" />
+        </id>
+        <property name="libMobilite" type="string">
+            <column name="lib_mobilite" length="50" />
+        </property>
+        <set name="artistes" inverse="true">
+            <key>
+                <column name="id_mobilite" />
+            </key>
+            <one-to-many class="booking.hibernate.entities.Artiste" />
+        </set>
+    </class>
+</hibernate-mapping>

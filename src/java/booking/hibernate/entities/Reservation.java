@@ -1,5 +1,5 @@
-package booking.hibernate.dao;
-// Generated 22 mai 2013 16:38:27 by Hibernate Tools 3.2.1.GA
+package booking.hibernate.entities;
+// Generated 23 mai 2013 10:41:49 by Hibernate Tools 3.2.1.GA
 
 
 
@@ -10,21 +10,26 @@ public class Reservation  implements java.io.Serializable {
 
 
      private ReservationId id;
+     private Artiste artiste;
      private String libTheme;
      private String libLieu;
+     private String indStatut;
 
     public Reservation() {
     }
 
 	
-    public Reservation(ReservationId id, String libTheme) {
+    public Reservation(ReservationId id, Artiste artiste, String libTheme) {
         this.id = id;
+        this.artiste = artiste;
         this.libTheme = libTheme;
     }
-    public Reservation(ReservationId id, String libTheme, String libLieu) {
+    public Reservation(ReservationId id, Artiste artiste, String libTheme, String libLieu, String indStatut) {
        this.id = id;
+       this.artiste = artiste;
        this.libTheme = libTheme;
        this.libLieu = libLieu;
+       this.indStatut = indStatut;
     }
    
     public ReservationId getId() {
@@ -33,6 +38,13 @@ public class Reservation  implements java.io.Serializable {
     
     public void setId(ReservationId id) {
         this.id = id;
+    }
+    public Artiste getArtiste() {
+        return this.artiste;
+    }
+    
+    public void setArtiste(Artiste artiste) {
+        this.artiste = artiste;
     }
     public String getLibTheme() {
         return this.libTheme;
@@ -47,6 +59,13 @@ public class Reservation  implements java.io.Serializable {
     
     public void setLibLieu(String libLieu) {
         this.libLieu = libLieu;
+    }
+    public String getIndStatut() {
+        return this.indStatut;
+    }
+    
+    public void setIndStatut(String indStatut) {
+        this.indStatut = indStatut;
     }
 
 

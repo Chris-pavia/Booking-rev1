@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 23 mai 2013 10:41:50 by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="booking.hibernate.entities.StatutResa" table="statut_resa" catalog="resa">
+        <id name="indStatut" type="string">
+            <column name="ind_statut" length="1" />
+            <generator class="assigned" />
+        </id>
+        <property name="libStatut" type="string">
+            <column name="lib_statut" length="20" />
+        </property>
+    </class>
+</hibernate-mapping>
