@@ -19,16 +19,14 @@
             <title>JSP Page</title>
         </head>
         <body>
-            <h1>Booking © côté Artiste...</h1>
-       
-        
-        
+            <%@include file="_headerArtiste.jsp" %>
+
         <article id="centre">
                 <%
                     String lsFragment = "";
 
                     if(request.getParameter("fragment") == null) {
-                        lsFragment = "_inscription.jsp";
+                        lsFragment = "_accueilArtiste.jsp";
                     }
                     else {
                         lsFragment = request.getParameter("fragment") + ".jsp";
@@ -41,6 +39,8 @@
                     </jsp:include>
                 </f:subview>
             </article>
+        
+         <%@include file="_footer.jsp" %>
             
         </body>
     </html>

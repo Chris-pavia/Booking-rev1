@@ -9,10 +9,12 @@
 <%@taglib prefix="f" uri="http://java.sun.com/jsf/core"%>
 <%@taglib prefix="h" uri="http://java.sun.com/jsf/html"%>
 
+<%@page import="booking.hibernate.entities.Artiste"%>
+
 <article id="inscription">
-    <h:form id="Inscription">  
+    <h:form id="Inscription" >  
         <h:outputLabel value="Nom" />
-        <h:inputText value="" id="nom" />
+        <h:inputText value=""  />
         <br />
         <h:outputLabel value="Prénom" />
         <h:inputText value="" id="prenom" />
@@ -33,22 +35,26 @@
         <h:inputTextarea value="" id="description" />
         <br />
         <h:selectOneMenu id="ville" title="Choix unique!">
-            <f:selectItem itemValue="75000" itemLabel="Paris"/>
-            <f:selectItem itemValue="69000" itemLabel="Lyon"/>
-            <f:selectItem itemValue="13000" itemLabel="Marseille"/>
+            <f:selectItem itemValue="" itemLabel="Autre (me contacter)"/>
+            <f:selectItem itemValue="" itemLabel="Ile-de-France"/>
+            <f:selectItem itemValue="" itemLabel="Région est"/>
+            <f:selectItem itemValue="" itemLabel="Région ouest"/>
+            <f:selectItem itemValue="" itemLabel="Région nord"/>
+            <f:selectItem itemValue="" itemLabel="Région sud-est"/>
+            <f:selectItem itemValue="" itemLabel="Région sud-ouest"/>
         </h:selectOneMenu>
         <br />
         <h:selectManyListbox id="langages" title="Choix multiple possible">
-            <f:selectItem itemValue="1" itemLabel="PHP"/>
-            <f:selectItem itemValue="2" itemLabel="Java"/>
-            <f:selectItem itemValue="3" itemLabel="HTML"/>
-            <f:selectItem itemValue="4" itemLabel="JavaScript"/>
-            <f:selectItem itemValue="5" itemLabel="VB .net"/>
-            <f:selectItem itemValue="6" itemLabel="ASP .net"/>
-            <f:selectItem itemValue="7" itemLabel="C"/>
+            <f:selectItem itemValue="1" itemLabel="DJ'"/>
+            <f:selectItem itemValue="2" itemLabel="Musicien/Pianiste"/>
+            <f:selectItem itemValue="3" itemLabel="Musicien/Batteur"/>
+            <f:selectItem itemValue="4" itemLabel="Magicien"/>
+            <f:selectItem itemValue="5" itemLabel="Clown"/>
+            <f:selectItem itemValue="6" itemLabel="Chanteur Variété"/>
+            <f:selectItem itemValue="7" itemLabel="Animateur"/>
         </h:selectManyListbox>
         <br />
-        <h:commandButton value="Enregistrer !" id="bouton_enregistrer" type="" title="enregistrer" action="VersInscriptionConfirmation"/>
+        <h:commandButton value="Enregistrer !" id="bouton_enregistrer" type="" title="enregistrer" action="VersInscriptionConfirmation" />
     </h:form>
 </article>
 
