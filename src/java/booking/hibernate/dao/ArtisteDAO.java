@@ -4,8 +4,8 @@
  */
 package booking.hibernate.dao;
 
+import booking.hibernate.entities.Artiste;
 import org.hibernate.Session;
-import booking.hibernate.dao.HibernateUtil;
 import java.util.List;
 import org.hibernate.HibernateException;
 import org.hibernate.Query;

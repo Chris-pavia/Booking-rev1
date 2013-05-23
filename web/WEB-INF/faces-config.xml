@@ -9,7 +9,7 @@
     
     <managed-bean>
         <managed-bean-name>artiste</managed-bean-name>
-        <managed-bean-class>booking.hibernate.dao.Artiste</managed-bean-class>
+        <managed-bean-class>booking.hibernate.entities.Artiste</managed-bean-class>
     
         <managed-bean-scope>session</managed-bean-scope></managed-bean>
     <managed-bean>

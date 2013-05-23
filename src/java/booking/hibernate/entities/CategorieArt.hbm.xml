@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 23 mai 2013 10:41:50 by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="booking.hibernate.entities.CategorieArt" table="categorie_art" catalog="resa">
+        <id name="idCatg" type="int">
+            <column name="id_catg" />
+            <generator class="assigned" />
+        </id>
+        <property name="libCatg" type="string">
+            <column name="lib_catg" length="50" />
+        </property>
+        <set name="artistes" inverse="true">
+            <key>
+                <column name="id_catg_art" />
+            </key>
+            <one-to-many class="booking.hibernate.entities.Artiste" />
+        </set>
+    </class>
+</hibernate-mapping>

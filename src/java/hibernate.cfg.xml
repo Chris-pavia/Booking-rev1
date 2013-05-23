@@ -7,10 +7,10 @@
     <property name="hibernate.connection.url">jdbc:mysql://192.168.1.146:3306/resa</property>
     <property name="hibernate.connection.username">next</property>
     <property name="hibernate.connection.password">mdp</property>
-    <mapping resource="booking/hibernate/dao/Artiste.hbm.xml"/>
-    <mapping resource="booking/hibernate/dao/Reservation.hbm.xml"/>
-    <mapping resource="booking/hibernate/dao/Mobilite.hbm.xml"/>
-    <mapping resource="booking/hibernate/dao/Utilisateur.hbm.xml"/>
-    <mapping resource="booking/hibernate/dao/CategorieArt.hbm.xml"/>
+    <mapping resource="booking/hibernate/entities/StatutResa.hbm.xml"/>
+    <mapping resource="booking/hibernate/entities/Reservation.hbm.xml"/>
+    <mapping resource="booking/hibernate/entities/Artiste.hbm.xml"/>
+    <mapping resource="booking/hibernate/entities/CategorieArt.hbm.xml"/>
+    <mapping resource="booking/hibernate/entities/Mobilite.hbm.xml"/>
   </session-factory>
 </hibernate-configuration>
