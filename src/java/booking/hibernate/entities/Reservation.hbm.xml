@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
-<!-- Generated 23 mai 2013 10:41:50 by Hibernate Tools 3.2.1.GA -->
+<!-- Generated 23 mai 2013 11:06:22 by Hibernate Tools 3.2.1.GA -->
 <hibernate-mapping>
     <class name="booking.hibernate.entities.Reservation" table="reservation" catalog="resa">
         <composite-id name="id" class="booking.hibernate.entities.ReservationId">
@@ -15,14 +15,26 @@
         <many-to-one name="artiste" class="booking.hibernate.entities.Artiste" update="false" insert="false" fetch="select">
             <column name="id_art" not-null="true" />
         </many-to-one>
+        <many-to-one name="statutResa" class="booking.hibernate.entities.StatutResa" fetch="select">
+            <column name="ind_statut" length="1" />
+        </many-to-one>
         <property name="libTheme" type="string">
             <column name="lib_theme" length="100" not-null="true" />
         </property>
         <property name="libLieu" type="string">
             <column name="lib_lieu" length="100" />
         </property>
-        <property name="indStatut" type="string">
-            <column name="ind_statut" length="1" />
+        <property name="libNomClient" type="string">
+            <column name="lib_nom_client" length="30" />
+        </property>
+        <property name="libPrenomClient" type="string">
+            <column name="lib_prenom_client" length="30" />
+        </property>
+        <property name="numMobileClient" type="string">
+            <column name="num_mobile_client" length="14" />
+        </property>
+        <property name="libEmailClient" type="string">
+            <column name="lib_email_client" length="30" />
         </property>
     </class>
 </hibernate-mapping>
