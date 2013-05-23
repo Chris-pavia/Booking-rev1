@@ -12,10 +12,5 @@
     <mapping resource="booking/hibernate/entities/Artiste.hbm.xml"/>
     <mapping resource="booking/hibernate/entities/CategorieArt.hbm.xml"/>
     <mapping resource="booking/hibernate/entities/Mobilite.hbm.xml"/>
-    <mapping resource="booking/hibernate/dao/Reservation.hbm.xml"/>
-    <mapping resource="booking/hibernate/dao/Artiste.hbm.xml"/>
-    <mapping resource="booking/hibernate/dao/Mobilite.hbm.xml"/>
-    <mapping resource="booking/hibernate/dao/CategorieArt.hbm.xml"/>
-    <mapping resource="booking/hibernate/dao/StatutResa.hbm.xml"/>
   </session-factory>
 </hibernate-configuration>
