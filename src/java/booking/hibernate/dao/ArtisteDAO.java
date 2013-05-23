@@ -49,6 +49,8 @@ public class ArtisteDAO {
 
         return res;
     }/// select
+    
+    
 
     // ------------------------
     public void fermerSession() {

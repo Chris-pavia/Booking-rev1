@@ -11,12 +11,46 @@
         <managed-bean-name>artiste</managed-bean-name>
         <managed-bean-class>booking.hibernate.entities.Artiste</managed-bean-class>
     
-        <managed-bean-scope>session</managed-bean-scope></managed-bean>
+        <managed-bean-scope>session</managed-bean-scope>
+    </managed-bean>
     <managed-bean>
-    <managed-bean-name>artisteDAO</managed-bean-name>
-    <managed-bean-class>booking.hibernate.dao.ArtisteDAO</managed-bean-class>
+        <managed-bean-name>artisteDAO</managed-bean-name>
+        <managed-bean-class>booking.hibernate.dao.ArtisteDAO</managed-bean-class>
 
-    <managed-bean-scope>session</managed-bean-scope></managed-bean>
+        <managed-bean-scope>session</managed-bean-scope>
+    </managed-bean>
 
+    <navigation-rule>
+        <from-view-id>/jsp/AccueilArtiste.jsp</from-view-id>
 
+        <navigation-case>
+            <!-- Si l'outcome (l'action demandee) renvoie PaysInsert JSF redirige vers PaysInsert.jsp -->
+            <from-action>VersInscriptionConfirmation</from-action>
+            <to-view-id>/jsp/AccueilArtiste.jsp?fragment=_inscriptionConfirmation</to-view-id>
+        </navigation-case>
+        
+    </navigation-rule>
+    
+     <navigation-rule>
+        <from-view-id>/jsp/AccueilArtiste.jsp?fragment=_inscriptionConfirmation</from-view-id>
+
+        <navigation-case>
+            <!-- Si l'outcome (l'action demandee) renvoie PaysInsert JSF redirige vers PaysInsert.jsp -->
+            <from-outcome>VersInscriptionValidation</from-outcome>
+            <to-view-id>/jsp/AccueilArtiste.jsp?fragment=_inscriptionValidation</to-view-id>
+        </navigation-case>
+        
+    </navigation-rule>
+    
+    <navigation-rule>
+        <from-view-id>/jsp/AccueilArtiste.jsp?fragment=_inscriptionValidation</from-view-id>
+
+        <navigation-case>
+            <!-- Si l'outcome (l'action demandee) renvoie PaysInsert JSF redirige vers PaysInsert.jsp -->
+            <from-outcome>VersConsulterProfil</from-outcome>
+            <to-view-id>/jsp/AccueilArtiste.jsp?fragment=_consulterProfil</to-view-id>
+        </navigation-case>
+        
+    </navigation-rule>
+    
 </faces-config>
