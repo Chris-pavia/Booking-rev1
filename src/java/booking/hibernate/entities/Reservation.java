@@ -1,5 +1,5 @@
 package booking.hibernate.entities;
-// Generated 23 mai 2013 12:34:30 by Hibernate Tools 3.2.1.GA
+// Generated 23 mai 2013 12:49:28 by Hibernate Tools 3.2.1.GA
 
 
 
@@ -18,6 +18,7 @@ public class Reservation  implements java.io.Serializable {
      private String libPrenomClient;
      private String numMobileClient;
      private String libEmailClient;
+     private String libAdrClient;
 
     public Reservation() {
     }
@@ -28,7 +29,7 @@ public class Reservation  implements java.io.Serializable {
         this.artiste = artiste;
         this.libTheme = libTheme;
     }
-    public Reservation(ReservationId id, Artiste artiste, StatutResa statutResa, String libTheme, String libLieu, String libNomClient, String libPrenomClient, String numMobileClient, String libEmailClient) {
+    public Reservation(ReservationId id, Artiste artiste, StatutResa statutResa, String libTheme, String libLieu, String libNomClient, String libPrenomClient, String numMobileClient, String libEmailClient, String libAdrClient) {
        this.id = id;
        this.artiste = artiste;
        this.statutResa = statutResa;
@@ -38,6 +39,7 @@ public class Reservation  implements java.io.Serializable {
        this.libPrenomClient = libPrenomClient;
        this.numMobileClient = numMobileClient;
        this.libEmailClient = libEmailClient;
+       this.libAdrClient = libAdrClient;
     }
    
     public ReservationId getId() {
@@ -102,6 +104,13 @@ public class Reservation  implements java.io.Serializable {
     
     public void setLibEmailClient(String libEmailClient) {
         this.libEmailClient = libEmailClient;
+    }
+    public String getLibAdrClient() {
+        return this.libAdrClient;
+    }
+    
+    public void setLibAdrClient(String libAdrClient) {
+        this.libAdrClient = libAdrClient;
     }
 
 

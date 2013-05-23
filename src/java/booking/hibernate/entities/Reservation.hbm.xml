@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
-<!-- Generated 23 mai 2013 12:34:30 by Hibernate Tools 3.2.1.GA -->
+<!-- Generated 23 mai 2013 12:49:28 by Hibernate Tools 3.2.1.GA -->
 <hibernate-mapping>
     <class name="booking.hibernate.entities.Reservation" table="reservation" catalog="resa">
         <composite-id name="id" class="booking.hibernate.entities.ReservationId">
@@ -35,6 +35,9 @@
         </property>
         <property name="libEmailClient" type="string">
             <column name="lib_email_client" length="30" />
+        </property>
+        <property name="libAdrClient" type="string">
+            <column name="lib_adr_client" length="30" />
         </property>
     </class>
 </hibernate-mapping>
