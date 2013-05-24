@@ -9,6 +9,10 @@
 <%@taglib prefix="f" uri="http://java.sun.com/jsf/core"%>
 <%@taglib prefix="h" uri="http://java.sun.com/jsf/html"%>
 
+<jsp:useBean id="iartiste" scope="session" class="booking.hibernate.bean.BeanArtiste" />
+<jsp:setProperty name="iartiste" property="*" />
+
+
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
     "http://www.w3.org/TR/html4/loose.dtd">
 
@@ -17,7 +21,7 @@
 
         <head>
             <meta charset="utf-8" />
-            <title>JSP Page avec JSF</title>
+            <title>Reservez votre artiste</title>
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <meta name="description" content="">
             <meta name="author" content="">
@@ -58,23 +62,52 @@
         </head>
 
         <body>
-            <%--
-                On va boucler sur un contenu Html neuf fois en changeant au fur
-                et à mesure ses valeur pour le positionnement CSS ainsi que pour le contenu
-                de chaques acteurs
-            --%>
-            <%@include file="_header.jsp" %>
+            <h1>Reservez l'artiste <strong>
+                    <%=iartiste.getPrenomArtiste() %> <%=iartiste.getNomArtiste() %>
+                </strong></h1>
 
-            <%@include file="_centre.jsp" %>
+            <p>Veuillez remplir les renseignements suivants :</p>
 
-            <%@include file="_footer.jsp" %>
+
+
+            <form action="FragmentReservationInsert.jsp" method="post">
+                <label class="">Nom </label>
+                <input type="text" name="nom" value="Dupont" />
+                <br />
+                <label class="">Prénom </label>
+                <input type="text" name="prenom" value="Jean" />
+                <br />
+                <label class="">Adresse email</label>
+                <input type="text" name="adresse_postale" value="3 rue des marchands, Pontoise" />
+                <br />
+                <label class="">Adresse postale</label>
+                <input type="text" name="adresse_email" value="jeanbon@mayonnaise.fr" />
+                <br />
+                <label class="">N° de téléphone</label>
+                <input type="text" name="num_tel" value="0612357888" />
+
+                <input type="submit" />
+            </form>
+
+
 
             <!-- Le javascript
                 ================================================== -->
             <!-- Placed at the end of the document so the pages load faster -->
             <script src="js/jquery.js"></script>
-            <script src="js/bootstrap.js"></script>
-            
+            <script src="js/bootstrap-transition.js"></script>
+            <script src="js/bootstrap-alert.js"></script>
+            <script src="js/bootstrap-modal.js"></script>
+            <script src="js/bootstrap-dropdown.js"></script>
+            <script src="js/bootstrap-scrollspy.js"></script>
+            <script src="js/bootstrap-tab.js"></script>
+            <script src="js/bootstrap-tooltip.js"></script>
+            <script src=".js/bootstrap-popover.js"></script>
+            <script src="js/bootstrap-button.js"></script>
+            <script src="js/bootstrap-collapse.js"></script>
+            <script src="js/bootstrap-carousel.js"></script>
+            <script src="js/bootstrap-typeahead.js"></script>
+
         </body>
 
     </html>

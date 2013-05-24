@@ -1,5 +1,5 @@
 package booking.hibernate.entities;
-// Generated 23 mai 2013 10:41:49 by Hibernate Tools 3.2.1.GA
+// Generated 23 mai 2013 12:49:28 by Hibernate Tools 3.2.1.GA
 
 
 import java.math.BigDecimal;
@@ -22,12 +22,13 @@ public class Artiste  implements java.io.Serializable {
      private String libEmail;
      private String numMobile;
      private String libPhoto;
+     private String libMdp;
      private Set<Reservation> reservations = new HashSet<Reservation>(0);
 
     public Artiste() {
     }
 
-    public Artiste(Mobilite mobilite, CategorieArt categorieArt, String libNom, String libPrenom, BigDecimal numTarifJour, String libDescr, String libEmail, String numMobile, String libPhoto, Set<Reservation> reservations) {
+    public Artiste(Mobilite mobilite, CategorieArt categorieArt, String libNom, String libPrenom, BigDecimal numTarifJour, String libDescr, String libEmail, String numMobile, String libPhoto, String libMdp, Set<Reservation> reservations) {
        this.mobilite = mobilite;
        this.categorieArt = categorieArt;
        this.libNom = libNom;
@@ -37,6 +38,7 @@ public class Artiste  implements java.io.Serializable {
        this.libEmail = libEmail;
        this.numMobile = numMobile;
        this.libPhoto = libPhoto;
+       this.libMdp = libMdp;
        this.reservations = reservations;
     }
    
@@ -109,6 +111,13 @@ public class Artiste  implements java.io.Serializable {
     
     public void setLibPhoto(String libPhoto) {
         this.libPhoto = libPhoto;
+    }
+    public String getLibMdp() {
+        return this.libMdp;
+    }
+    
+    public void setLibMdp(String libMdp) {
+        this.libMdp = libMdp;
     }
     public Set<Reservation> getReservations() {
         return this.reservations;

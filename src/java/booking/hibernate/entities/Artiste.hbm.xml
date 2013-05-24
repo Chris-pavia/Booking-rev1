@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
-<!-- Generated 23 mai 2013 10:41:50 by Hibernate Tools 3.2.1.GA -->
+<!-- Generated 23 mai 2013 12:49:28 by Hibernate Tools 3.2.1.GA -->
 <hibernate-mapping>
     <class name="booking.hibernate.entities.Artiste" table="artiste" catalog="resa">
         <id name="idArt" type="java.lang.Integer">
@@ -34,6 +34,9 @@
         </property>
         <property name="libPhoto" type="string">
             <column name="lib_photo" length="50" />
+        </property>
+        <property name="libMdp" type="string">
+            <column name="lib_mdp" length="16" />
         </property>
         <set name="reservations" inverse="true">
             <key>
