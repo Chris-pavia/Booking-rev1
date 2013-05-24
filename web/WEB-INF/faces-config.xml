@@ -21,12 +21,12 @@
     </managed-bean>
 
     <navigation-rule>
-        <from-view-id>/jsp/AccueilArtiste.jsp</from-view-id>
+        <from-view-id>/jsp/AccueilArtiste.jsp?fragment=_inscription</from-view-id>
 
         <navigation-case>
             <!-- Si l'outcome (l'action demandee) renvoie PaysInsert JSF redirige vers PaysInsert.jsp -->
             <from-action>VersInscriptionConfirmation</from-action>
-            <to-view-id>/jsp/AccueilArtiste.jsp?fragment=_accueilArtiste</to-view-id>
+            <to-view-id>/jsp/AccueilArtiste.jsp?fragment=_inscriptionConfirmation</to-view-id>
         </navigation-case>
         
     </navigation-rule>

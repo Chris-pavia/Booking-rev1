@@ -16,8 +16,9 @@
 
 
         <%
+            int idArtiste=6;
             ReservationDAO ReservationDAO = new ReservationDAO();
-            List<Reservation> listeReservation = ReservationDAO.getReservation(6);
+            List<Reservation> listeReservation = ReservationDAO.getReservation(idArtiste);
 
             if (listeReservation != null) {
                 Iterator<Reservation> itr = listeReservation.iterator();
